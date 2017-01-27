@@ -1254,17 +1254,17 @@ button {
         margin-bottom: 0; } }
 
 body {
-  background-color: #638696;
-  color: white;
+  color: black;
   font-family: Quicksand; }
   body .hidden {
     display: none; }
 
 .top {
-  background-color: #254477;
+  background-image: url("http://3.bp.blogspot.com/-MwkOZWd-24Q/T0k_G-9TYNI/AAAAAAAAA0c/riTaLZk1MT4/s1600/Van+Gogh+Red+.jpg");
   padding: 20px; }
 
 h1 {
+  color: white;
   font-size: 3em;
   text-align: center;
   margin-top: 0px;
@@ -1331,15 +1331,16 @@ ul {
   ul::after {
     clear: both; }
   ul li {
-    width: 100%;
+    width: 50%;
     float: left;
     padding-right: 0.625rem;
     padding-left: 0.625rem;
     max-width: 75rem;
     margin-right: auto;
     margin-left: auto;
-    border-bottom: 1px dotted white;
-    padding: 30px; }
+    border-bottom: 1px dotted black;
+    padding: 30px;
+    height: 600px; }
     @media print, screen and (min-width: 40em) {
       ul li {
         padding-right: 0.9375rem;
@@ -1356,6 +1357,8 @@ ul {
       font-size: .9em; }
     ul li .title {
       font-size: 1.5em; }
+    ul li .overview {
+      font-size: .8em; }
     ul li button {
       display: inline-block;
       vertical-align: middle;

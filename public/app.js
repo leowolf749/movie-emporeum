@@ -42,9 +42,10 @@ app.factory('MovieService', function ($http) {
     });
 
     return {
-        addMovie: function (title, release_date, isFresh, isRotten) {
+        addMovie: function (title, overview, release_date, isFresh, isRotten) {
             movies.push({
                 title: title,
+                overview: overview,
                 release_date: release_date,
                 isFresh: null,
                 isRotten: null,

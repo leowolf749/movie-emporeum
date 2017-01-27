@@ -6,8 +6,7 @@
 @include foundation-grid;
 
 body {
-    background-color: #638696;
-    color: white;
+    color: black;
     font-family: Quicksand;
 
     .hidden {
@@ -17,11 +16,13 @@ body {
 }
 
 .top {
-    background-color: #254477;
+    background-image: url('http://3.bp.blogspot.com/-MwkOZWd-24Q/T0k_G-9TYNI/AAAAAAAAA0c/riTaLZk1MT4/s1600/Van+Gogh+Red+.jpg');
+    // background-color: #638696;
     padding: 20px;
 }
 
 h1 {
+    color: white;
     font-size: 3em;
     text-align: center;
     margin-top: 0px;
@@ -56,13 +57,13 @@ ul {
     padding: 0px;
 
     li {
-        @include grid-column(12);
+        @include grid-column(6);
         @include grid-row();
         // background-color: #af8887;
-        border-bottom: 1px dotted white;
+        border-bottom: 1px dotted black;
         padding: 30px;
         // margin-top: 30px;
-        // height: 500px;
+        height: 600px;
         
         p {
             text-align: center;
@@ -70,6 +71,10 @@ ul {
         }
         .title {
             font-size: 1.5em;
+        }
+
+        .overview {
+            font-size: .8em;
         }
 
         button {

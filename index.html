@@ -26,6 +26,7 @@
             <li ng-repeat="currentMovie in movies">
                 <img class="poster" ng-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{ currentMovie.poster_path }}">
                 <p class="title">{{ currentMovie.title }}</p>
+                <p class="overview">{{ currentMovie.overview }}</p>
                 <p>{{ currentMovie.release_date }}</p>
                 <button ng-hide="currentMovie.isFresh" ng-hide="currentMovie.isRotten" ng-click="fresh(currentMovie)">fresh</button>
                 <button ng-hide="currentMovie.isFresh" ng-hide="currentMovie.isRotten" ng-click="rotten(currentMovie)">rotten</button>
