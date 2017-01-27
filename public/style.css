@@ -1295,7 +1295,7 @@ h1 {
     .movielist input:last-child:not(:first-child) {
       float: right; }
 
-button {
+.add {
   display: inline-block;
   vertical-align: middle;
   margin: 0 0 1rem 0;
@@ -1313,9 +1313,9 @@ button {
   display: block;
   margin: 0 auto;
   margin-top: 20px; }
-  [data-whatinput='mouse'] button {
+  [data-whatinput='mouse'] .add {
     outline: 0; }
-  button:hover, button:focus {
+  .add:hover, .add:focus {
     background-color: #14679e;
     color: #fefefe; }
 
@@ -1340,7 +1340,7 @@ ul {
     margin-left: auto;
     border-bottom: 1px dotted black;
     padding: 30px;
-    height: 600px; }
+    height: 550px; }
     @media print, screen and (min-width: 40em) {
       ul li {
         padding-right: 0.9375rem;
@@ -1355,43 +1355,6 @@ ul {
     ul li p {
       text-align: center;
       font-size: .9em; }
-    ul li .title {
-      font-size: 1.5em; }
-    ul li .overview {
-      font-size: .8em; }
-    ul li button {
-      display: inline-block;
-      vertical-align: middle;
-      margin: 0 0 1rem 0;
-      padding: 0.85em 1em;
-      -webkit-appearance: none;
-      border: 1px solid transparent;
-      border-radius: 0;
-      transition: background-color 0.25s ease-out, color 0.25s ease-out;
-      font-size: 0.9rem;
-      line-height: 1;
-      text-align: center;
-      cursor: pointer;
-      background-color: #1779ba;
-      color: #fefefe;
-      width: 50%;
-      float: left;
-      padding-right: 0.625rem;
-      padding-left: 0.625rem;
-      padding: 5px;
-      border-radius: 8px;
-      margin: 0px; }
-      [data-whatinput='mouse'] ul li button {
-        outline: 0; }
-      ul li button:hover, ul li button:focus {
-        background-color: #14679e;
-        color: #fefefe; }
-      @media print, screen and (min-width: 40em) {
-        ul li button {
-          padding-right: 0.9375rem;
-          padding-left: 0.9375rem; } }
-      ul li button:last-child:not(:first-child) {
-        float: right; }
     ul li img {
       width: 12%;
       display: block;
@@ -1399,3 +1362,33 @@ ul {
       padding: 5px; }
     ul li .poster {
       width: 30%; }
+    ul li .title {
+      font-size: 1.5em; }
+    ul li .overview {
+      font-size: .8em; }
+    ul li .fa {
+      color: black; }
+    ul li .rate {
+      max-width: 75rem;
+      margin-right: auto;
+      margin-left: auto;
+      width: 30%; }
+      ul li .rate::before, ul li .rate::after {
+        display: table;
+        content: ' '; }
+      ul li .rate::after {
+        clear: both; }
+      ul li .rate button {
+        width: 8.33333%;
+        float: left;
+        padding-right: 0.625rem;
+        padding-left: 0.625rem;
+        border-radius: 8px;
+        padding: 0px;
+        margin: 0px; }
+        @media print, screen and (min-width: 40em) {
+          ul li .rate button {
+            padding-right: 0.93rem;
+            padding-left: 0.93rem; } }
+        /*ul li .rate button:last-child:not(:first-child) {
+          float: right; }*/

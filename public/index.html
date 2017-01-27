@@ -9,6 +9,7 @@
     <!-- add js file -->
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <script src="https://use.fontawesome.com/1bb3a227b1.js"></script>
     <script src="app.js"></script>
 </head>
     
@@ -19,7 +20,7 @@
             <input type="text" ng-model="movieTitle" placeholder="enter title">
             <input type="text" ng-model="movieRelease" placeholder="enter release date">
         </div>
-        <button ng-click="newMovie()">add movie</button>
+        <button class="add" ng-click="newMovie()">add movie</button>
     </section>
     <section ng-controller="ShowMovies">
         <ul ng-model="list">
@@ -28,10 +29,17 @@
                 <p class="title">{{ currentMovie.title }}</p>
                 <p class="overview">{{ currentMovie.overview }}</p>
                 <p>{{ currentMovie.release_date }}</p>
-                <button ng-hide="currentMovie.isFresh" ng-hide="currentMovie.isRotten" ng-click="fresh(currentMovie)">fresh</button>
+                <!--<button ng-hide="currentMovie.isFresh" ng-hide="currentMovie.isRotten" ng-click="fresh(currentMovie)">fresh</button>
                 <button ng-hide="currentMovie.isFresh" ng-hide="currentMovie.isRotten" ng-click="rotten(currentMovie)">rotten</button>
                 <img ng-show="currentMovie.isFresh" ng-src="http://www.billdamon.com/images/rottentomatoes/fresh.png">
-                <img ng-show="currentMovie.isRotten" ng-src="http://videoeta.com/images/eta/rt/rotten.png">
+                <img ng-show="currentMovie.isRotten" ng-src="http://videoeta.com/images/eta/rt/rotten.png">-->
+                <div class="rate">
+                    <button><i class="fa fa-star-o" aria-hidden="true"></i></button>
+                    <button><i class="fa fa-star-o" aria-hidden="true"></i></button>
+                    <button><i class="fa fa-star-o" aria-hidden="true"></i></button>
+                    <button><i class="fa fa-star-o" aria-hidden="true"></i></button>
+                    <button><i class="fa fa-star-o" aria-hidden="true"></i></button>
+                </div>
             </li>
         </ul>
     </section>

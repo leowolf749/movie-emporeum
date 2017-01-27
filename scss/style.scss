@@ -44,7 +44,7 @@ h1 {
 
 }
 
-    button {
+    .add {
         @include button;
         display: block;
         margin: 0 auto;
@@ -63,27 +63,14 @@ ul {
         border-bottom: 1px dotted black;
         padding: 30px;
         // margin-top: 30px;
-        height: 600px;
+        height: 550px;
         
         p {
             text-align: center;
             font-size: .9em;
         }
-        .title {
-            font-size: 1.5em;
-        }
 
-        .overview {
-            font-size: .8em;
-        }
 
-        button {
-            @include button;
-            @include grid-column(6);
-            padding: 5px;
-            border-radius: 8px;
-            margin: 0px;
-        }
 
         img {
             width: 12%;
@@ -93,9 +80,33 @@ ul {
 
         }
 
-           .poster {
-                width: 30%;
+        .poster {
+            width: 30%;
+        }
+
+        .title {
+            font-size: 1.5em;
+        }
+
+        .overview {
+            font-size: .8em;
+        }
+
+        .fa {
+            color: black;
+        }
+
+        .rate {
+            @include grid-row(5);
+            width: 30%;
+            
+            button {
+                @include grid-column(1);
+                border-radius: 8px;
+                padding: 0px;
+                margin: 0px;
             }
+        }
   
     }
 
