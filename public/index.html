@@ -1,0 +1,39 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>movie emporeum</title>
+    <!-- add css file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- add js file -->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+    
+<body ng-app="MovieApp">
+    <section class="top" ng-controller="NewMovies">
+        <h1>MOVIE EMPOREUM</h1>
+        <div class="movielist">
+            <input type="text" ng-model="movieTitle" placeholder="enter title">
+            <input type="text" ng-model="movieRelease" placeholder="enter release date">
+        </div>
+        <button ng-click="newMovie()">add movie</button>
+    </section>
+    <section ng-controller="ShowMovies">
+        <ul ng-model="list">
+            <li ng-repeat="currentMovie in movies">
+                <img class="poster" ng-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{ currentMovie.poster_path }}">
+                <p class="title">{{ currentMovie.title }}</p>
+                <p>{{ currentMovie.release_date }}</p>
+                <button ng-hide="currentMovie.isFresh" ng-hide="currentMovie.isRotten" ng-click="fresh(currentMovie)">fresh</button>
+                <button ng-hide="currentMovie.isFresh" ng-hide="currentMovie.isRotten" ng-click="rotten(currentMovie)">rotten</button>
+                <img ng-show="currentMovie.isFresh" ng-src="http://www.billdamon.com/images/rottentomatoes/fresh.png">
+                <img ng-show="currentMovie.isRotten" ng-src="http://videoeta.com/images/eta/rt/rotten.png">
+            </li>
+        </ul>
+    </section>
+</body>
+
+</html>

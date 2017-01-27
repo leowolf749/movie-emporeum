@@ -1,0 +1,98 @@
+/* Include Foundation */
+
+@import '../node_modules/foundation-sites/scss/foundation';
+
+@include foundation-global-styles;
+@include foundation-grid;
+
+body {
+    background-color: #638696;
+    color: white;
+    font-family: Quicksand;
+
+    .hidden {
+        display: none;
+    }
+
+}
+
+.top {
+    background-color: #254477;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+    margin-top: 0px;
+    border-bottom: 1px solid white;
+}
+
+
+.movielist {
+    @include grid-row();
+    margin-top: 40px;
+    width: 65%;
+
+    input {
+        @include grid-column(6);
+        text-align: center;
+        padding: 5px;
+        // margin: 3px;
+    }
+
+}
+
+    button {
+        @include button;
+        display: block;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+ul {
+    @include grid-row();
+    list-style-type: none;
+    padding: 0px;
+
+    li {
+        @include grid-column(12);
+        @include grid-row();
+        // background-color: #af8887;
+        border-bottom: 1px dotted white;
+        padding: 30px;
+        // margin-top: 30px;
+        // height: 500px;
+        
+        p {
+            text-align: center;
+            font-size: .9em;
+        }
+        .title {
+            font-size: 1.5em;
+        }
+
+        button {
+            @include button;
+            @include grid-column(6);
+            padding: 5px;
+            border-radius: 8px;
+            margin: 0px;
+        }
+
+        img {
+            width: 12%;
+            display: block;
+            margin: 0 auto;
+            padding: 5px;
+
+        }
+
+           .poster {
+                width: 30%;
+            }
+  
+    }
+
+
+}
