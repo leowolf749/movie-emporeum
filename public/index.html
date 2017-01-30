@@ -34,11 +34,17 @@
                 <img ng-show="currentMovie.isFresh" ng-src="http://www.billdamon.com/images/rottentomatoes/fresh.png">
                 <img ng-show="currentMovie.isRotten" ng-src="http://videoeta.com/images/eta/rt/rotten.png">-->
                 <div class="rate">
-                    <button><i class="fa fa-star-o" aria-hidden="true"></i></button>
-                    <button><i class="fa fa-star-o" aria-hidden="true"></i></button>
-                    <button><i class="fa fa-star-o" aria-hidden="true"></i></button>
-                    <button><i class="fa fa-star-o" aria-hidden="true"></i></button>
-                    <button><i class="fa fa-star-o" aria-hidden="true"></i></button>
+                    <i class="fa fa-star-o" aria-hidden="true" ng-hide="currentMovie.isRated" ng-click="rating(currentMovie)"></i>
+                    <i class="fa fa-star-o" aria-hidden="true" ng-hide="currentMovie.isRated" ng-click="rating(currentMovie)"></i>
+                    <i class="fa fa-star-o" aria-hidden="true" ng-hide="currentMovie.isRated" ng-click="rating(currentMovie)"></i>
+                    <i class="fa fa-star-o" aria-hidden="true" ng-hide="currentMovie.isRated" ng-click="rating(currentMovie)"></i>
+                    <i class="fa fa-star-o" aria-hidden="true" ng-hide="currentMovie.isRated" ng-click="rating(currentMovie)"></i>
+
+                    <i class="fa fa-star" aria-hidden="true" ng-show="currentMovie.isRated"></i>
+                    <i class="fa fa-star" aria-hidden="true" ng-show="currentMovie.isRated"></i>
+                    <i class="fa fa-star" aria-hidden="true" ng-show="currentMovie.isRated"></i>
+                    <i class="fa fa-star" aria-hidden="true" ng-show="currentMovie.isRated"></i>
+                    <i class="fa fa-star" aria-hidden="true" ng-show="currentMovie.isRated"></i>
                 </div>
             </li>
         </ul>

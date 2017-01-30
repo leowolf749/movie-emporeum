@@ -8,7 +8,7 @@ app.controller('NewMovies', function ($scope, MovieService){
     
 
     $scope.newMovie = function () {
-        MovieService.addMovie($scope.movieTitle, $scope.movieRelease, $scope.isFresh, $scope.isRotten);
+        MovieService.addMovie($scope.movieTitle, $scope.movieRelease, $scope.isRated);
         $scope.movieTitle = '';
         $scope.movieRelease = '';
 
@@ -19,14 +19,9 @@ app.controller('ShowMovies', function ($scope, MovieService){
     
     $scope.movies = MovieService.getMovies();
     
-    $scope.fresh = function (target) {
-        MovieService.markAsFresh(target);
-        // console.log(`Marking ${target.title} as fresh`);
-        
-    }
-
-    $scope.rotten = function (target) {
-        MovieService.markAsRotten(target);
+    $scope.rating = function (target) {
+        MovieService.selectRating(target);
+        console.log(`Giving ${target.title} a rating`);
         
     }
     
@@ -42,23 +37,19 @@ app.factory('MovieService', function ($http) {
     });
 
     return {
-        addMovie: function (title, overview, release_date, isFresh, isRotten) {
+        addMovie: function (title, overview, release_date, isRated) {
             movies.push({
                 title: title,
                 overview: overview,
                 release_date: release_date,
-                isFresh: null,
-                isRotten: null,
+                isRated: null,
             });
         },
         getMovies: function () {
             return movies;
         },
-        markAsFresh(good) {
-            good.isFresh = true;
-        },
-        markAsRotten(bad) {
-            bad.isRotten = true;
+        selectRating(good) {
+            good.isRated = true;
         },
     };
 });
