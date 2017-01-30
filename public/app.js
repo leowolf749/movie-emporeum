@@ -8,7 +8,7 @@ app.controller('NewMovies', function ($scope, MovieService){
     
 
     $scope.newMovie = function () {
-        MovieService.addMovie($scope.movieTitle, $scope.movieRelease, $scope.isRated);
+        MovieService.addMovie($scope.movieTitle, $scope.movieRelease, $scope.isRated, $scope.rating);
         $scope.movieTitle = '';
         $scope.movieRelease = '';
 
@@ -19,7 +19,7 @@ app.controller('ShowMovies', function ($scope, MovieService){
     
     $scope.movies = MovieService.getMovies();
     
-    $scope.rating = function (target) {
+    $scope.rating = function (target, num) {
         MovieService.selectRating(target);
         console.log(`Giving ${target.title} a rating`);
         
@@ -37,12 +37,13 @@ app.factory('MovieService', function ($http) {
     });
 
     return {
-        addMovie: function (title, overview, release_date, isRated) {
+        addMovie: function (title, overview, release_date, isRated, rating) {
             movies.push({
                 title: title,
                 overview: overview,
                 release_date: release_date,
                 isRated: null,
+                rating: null,
             });
         },
         getMovies: function () {

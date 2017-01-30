@@ -29,17 +29,15 @@
                 <p class="title">{{ currentMovie.title }}</p>
                 <p class="overview">{{ currentMovie.overview }}</p>
                 <p>{{ currentMovie.release_date }}</p>
-                <!--<button ng-hide="currentMovie.isFresh" ng-hide="currentMovie.isRotten" ng-click="fresh(currentMovie)">fresh</button>
-                <button ng-hide="currentMovie.isFresh" ng-hide="currentMovie.isRotten" ng-click="rotten(currentMovie)">rotten</button>
-                <img ng-show="currentMovie.isFresh" ng-src="http://www.billdamon.com/images/rottentomatoes/fresh.png">
-                <img ng-show="currentMovie.isRotten" ng-src="http://videoeta.com/images/eta/rt/rotten.png">-->
-                <div class="rate">
-                    <i class="fa fa-star-o" aria-hidden="true" ng-hide="currentMovie.isRated" ng-click="rating(currentMovie)"></i>
-                    <i class="fa fa-star-o" aria-hidden="true" ng-hide="currentMovie.isRated" ng-click="rating(currentMovie)"></i>
-                    <i class="fa fa-star-o" aria-hidden="true" ng-hide="currentMovie.isRated" ng-click="rating(currentMovie)"></i>
-                    <i class="fa fa-star-o" aria-hidden="true" ng-hide="currentMovie.isRated" ng-click="rating(currentMovie)"></i>
-                    <i class="fa fa-star-o" aria-hidden="true" ng-hide="currentMovie.isRated" ng-click="rating(currentMovie)"></i>
 
+                <div class="rate">
+                    <!-- Stars that are displayed before a rating has been selected -->
+                    <i class="fa fa-star-o" aria-hidden="true" ng-hide="currentMovie.isRated" ng-click="rating(currentMovie, 1)"></i>
+                    <i class="fa fa-star-o" aria-hidden="true" ng-hide="currentMovie.isRated" ng-click="rating(currentMovie)"></i>
+                    <i class="fa fa-star-o" aria-hidden="true" ng-hide="currentMovie.isRated" ng-click="rating(currentMovie)"></i>
+                    <i class="fa fa-star-o" aria-hidden="true" ng-hide="currentMovie.isRated" ng-click="rating(currentMovie)"></i>
+                    <i class="fa fa-star-o" aria-hidden="true" ng-hide="currentMovie.isRated" ng-click="rating(currentMovie)"></i>
+                    <!-- Stars that display after a rating has been selected -->
                     <i class="fa fa-star" aria-hidden="true" ng-show="currentMovie.isRated"></i>
                     <i class="fa fa-star" aria-hidden="true" ng-show="currentMovie.isRated"></i>
                     <i class="fa fa-star" aria-hidden="true" ng-show="currentMovie.isRated"></i>

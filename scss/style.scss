@@ -100,15 +100,8 @@ ul {
             @include grid-row(5);
             width: 30%;
             
-            button {
+            i {
                 @include grid-column(1);
-                border-radius: 8px;
-                padding: 0px;
-                margin: 0px;
-
-                .green {
-                    background-color: green;
-                }
             }
         }
   

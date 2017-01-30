@@ -1378,19 +1378,13 @@ ul {
         content: ' '; }
       ul li .rate::after {
         clear: both; }
-      ul li .rate button {
+      ul li .rate i {
         width: 8.33333%;
         float: left;
         padding-right: 0.625rem;
-        padding-left: 0.625rem;
-        border-radius: 8px;
-        padding: 0px;
-        margin: 0px; }
+        padding-left: 0.625rem; }
         @media print, screen and (min-width: 40em) {
-          ul li .rate button {
+          ul li .rate i {
             padding-right: 0.9375rem;
             padding-left: 0.9375rem; } }
-        ul li .rate button:last-child:not(:first-child) {
-          float: right; }
-        ul li .rate button .green {
-          background-color: green; }
+
