@@ -15,14 +15,18 @@
     
 <body ng-app="MovieApp">
     <section class="top" ng-controller="NewMovies">
-        <h1>MOVIE EMPOREUM</h1>
+        <div class="heading">
+            <img class="popcorn" src="https://iconeasy.com/icon/png/Movie%20%26%20TV/Curtains/PopCorn.png"/>
+            <h1>MOVIE EMPOREUM</h1>
+            <img class="popcorn" src="https://iconeasy.com/icon/png/Movie%20%26%20TV/Curtains/PopCorn.png"/>
+        </div>
         <div class="movielist">
             <input type="text" ng-model="movieTitle" placeholder="enter title">
             <input type="text" ng-model="movieRelease" placeholder="enter release date">
         </div>
         <button class="add" ng-click="newMovie()">add movie</button>
     </section>
-    <section ng-controller="ShowMovies">
+    <section id="movieSection" ng-controller="ShowMovies">
         <ul ng-model="list">
             <li ng-repeat="currentMovie in movies">
                 <img class="poster" ng-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2{{ currentMovie.poster_path }}">

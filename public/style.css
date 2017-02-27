@@ -1260,11 +1260,21 @@ body {
     display: none; }
 
 .top {
-  background-image: url("http://3.bp.blogspot.com/-MwkOZWd-24Q/T0k_G-9TYNI/AAAAAAAAA0c/riTaLZk1MT4/s1600/Van+Gogh+Red+.jpg");
+  background-image: url("http://pixel.nymag.com/imgs/daily/science/2016/05/13/13-movie-theater-smells.w536.h357.2x.jpg");
+  background-size: 100%;
   padding: 20px; }
 
+.heading {
+  text-align: center; }
+
+.popcorn {
+  width: 100px;
+  margin-left: 50px;
+  margin-right: 50px; }
+
 h1 {
-  color: white;
+  color: #eded7b;
+  display: inline-block;
   font-size: 3em;
   text-align: center;
   margin-top: 0px;
@@ -1387,4 +1397,5 @@ ul {
           ul li .rate i {
             padding-right: 0.9375rem;
             padding-left: 0.9375rem; } }
-
+        ul li .rate i:last-child:not(:first-child) {
+          float: right; }
